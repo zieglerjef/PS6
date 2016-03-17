@@ -5,9 +5,8 @@
 #'
 #' @param object An object of the class 'Candidate'.
 #' @param remainingDelegates Number of delegates not yet allocated in a given candidate's party primary (numeric).
-#' #'
-#' @return A numeric object denoting the proportion of the delegates yet to be allocated that a 
-#' presidential candidate must secure in order to win his party's nomination.
+#' 
+#' @return Proportion of the delegates not yet allocated that a given candidate needs to win party's nomination (numeric).
 #' 
 #' @author Jeff Ziegler
 #' @examples
@@ -37,15 +36,12 @@ setGeneric(name = "propNeeded",
 # create new method propNeeded
 setMethod(f="propNeeded", 
           # create function
-          definition = function(object, remainingDelegates) {
+          definition = function(object, remainingDelegates){
             # calculate proportion of remaining delegates needed to win
-            delegateProp <- (object@delegatesNeeded - object@delegatesWon) / remainingDelegates
+            delegateProp <- ((object@delegatesNeeded - object@delegatesWon) / remainingDelegates)
             # make sure candidate is not essentially eliminated already
-            if(delegateProp > 1){
-              stop("The number of delegates needed exceeds the number available.")
-            }
-            else{
-              print(delegateProp)
-            }
+            ifelse(delegateProp > 1, stop("The number of delegates needed exceeds the number available."),
+                   return(delegateProp)
+            )
           }
 )

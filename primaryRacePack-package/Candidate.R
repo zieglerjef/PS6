@@ -81,5 +81,5 @@ setMethod(f="show",
             # rename matrix columns
             colnames(showCandidate) <- c("Name", "Delegates Won", "Party", "Delegates Needed")
             print(showCandidate)
-          }   
+          }  
 )
