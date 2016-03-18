@@ -1,0 +1,17 @@
+Package: primaryRacePack
+Type: Package
+Title: primaryRacePack 
+Version: 1.0
+Date: 2016-03-18
+Author: Jeff Ziegler
+Maintainer: Jeff Ziegler <jeffreyziegler@wustl.edu>
+Description: The primaryRacePack package calculates the number of delegates needed based on the number of delegates won and remaining.
+License: GPL (>= 2)
+RoxygenNote: 5.0.1
+Suggests:
+    devtools
+Collate:
+    'Candidate.R'
+    ‘primaryRacePack-package.r'
+    'createCandidate.R'
+    'propNeeded.R'
