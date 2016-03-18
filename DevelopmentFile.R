@@ -1,7 +1,7 @@
 ## Load libraries and set working directory
 library(devtools)
 library(roxygen2)
-setwd("~/Google Drive/Washu/Spring2016/appliedStats/problemSets/PS6/primaryRacePack-package")
+setwd("~/Documents/Git/Class/PS6/primaryRacePack-package")
 
 # create package skelton so it can find the package root
 package.skeleton(code_files = c("primaryRacePack-package.R", "Candidate.R", "createCandidate.R", "propNeeded.R"),

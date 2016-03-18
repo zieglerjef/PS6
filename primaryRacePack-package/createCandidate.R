@@ -27,9 +27,10 @@
 #' @aliases createCandidate,ANY-method
 #' @export
 # create generic for method of createCandidate
-setGeneric(name = "createCandidate", def = function(x){
-  standardGeneric("createCandidate")
-})
+setGeneric(name = "createCandidate",
+           def=function(name, delegatesWon, party)
+           {standardGeneric("createCandidate")}
+)
 
 # create method to generate object of class Candidate
 setMethod(f="createCandidate",
