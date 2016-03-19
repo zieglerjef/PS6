@@ -1,6 +1,6 @@
 # PS6
 
-Check out the DevelopmentFile.R in the main directory for instructions of:
+Check out the `DevelopmentFile.R` in the main directory for instructions of:
 
 1) Create package on your own
 
