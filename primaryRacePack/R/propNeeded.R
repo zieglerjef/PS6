@@ -22,10 +22,13 @@
 # create generic function that executes method 
 setGeneric(name = "propNeeded",
            # set default remaining delegates as of March, 17 (1396)
-           def = function(object, remainingDelegates=1396){
+           def = function(object, remainingDelegates=NULL){
              # check validity
              validObject(object)
              # make sure remaining is entered correctly
+             if(is.null(remainingDelegates)){
+               stop("Please indicate how many delegates remain!")
+             }
              if(!is.numeric(remainingDelegates)){
                stop("remainingDelegates must be numeric!")
              }

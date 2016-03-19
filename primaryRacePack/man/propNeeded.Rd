@@ -5,7 +5,7 @@
 \alias{propNeeded,ANY-method}
 \title{Calculate the proportion of delegates a given candidate needs to win nomination}
 \usage{
-propNeeded(object, remainingDelegates = 1396)
+propNeeded(object, remainingDelegates = NULL)
 }
 \arguments{
 \item{object}{An object of the class 'Candidate'.}

@@ -21,9 +21,8 @@ Jeff Ziegler: \email{jeffreyziegler@wustl.edu}
 \seealso{
 \code{\link{createCandidate}}, \code{\link{Candidate}}, \code{\link{propNeeded}}
 
-\dontrun{
+
 demo(createCandidate.R)
 demo(propNeeded.R)
-}
 }
 

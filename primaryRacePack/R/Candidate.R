@@ -1,6 +1,6 @@
 #' A Candidate object 
 #' 
-#' Objects of class \code{Candidate} are created by the \code{addCandidate} function. Objects of
+#' Objects of class \code{Candidate} are created by the \code{createCandidate} function. Objects of
 #' this class include \code{show} and \code{print} methods.
 #'
 #' 
