@@ -9,7 +9,7 @@
 #' \item \code{name} Name of the presidential candidate (character string).
 #' \item \code{delegatesWon} Number of delegates won by given candidate (numeric).
 #' \item \code{party} Party of given candidate, 'Republican' or 'Democratic' (character string).
-#' \item \code{delegatesNeeded} Number of delegates needed by given candidate (numeric).
+#' \item \code{delegatesNeeded} Number of delegates needed by given candidate to obtain nomination (numeric).
 #' }
 #'
 #' @author Jeff Ziegler
@@ -19,7 +19,7 @@
 #' @export
 # construct class Candidate object
 setClass(Class="Candidate",
-         # specify that all inputs should be numeric
+         # specify input classes
          slots = c(name = "character",
                    delegatesWon = "numeric",
                    party = "character",
@@ -39,7 +39,7 @@ setClass(Class="Candidate",
              stop("Please include the name of the candidate!")
            }
            # make sure candidate party is specified
-           if(is.null(object@name)){
+           if(object@party != "Republican" & object@party != "Democrat"){
              stop("Indicate the party of the candidate: 'Republican' or 'Democrat'!")
            }
          }

@@ -9,12 +9,11 @@
 #'
 #' @return An object of class `Candidate' containing
 #' \itemize{
-#'  \item{name} The name of a presidential candidate.
-#'  \item{delegatesWon} The number of delegates the presidential candidate has won. 
-#'  \item{party} The party of the presidential candidate, either `Democratic' or `Republican'.
-#'  \item{delegatesNeeded} The number of delegates the presidential candidate needs to secure to win 
-#'  his party's nomination. This is automatically determined through the initialize method called when
-#'  a new instance of the class `Candidate' is created.
+#' \item name Name of the presidential candidate (character string).
+#' \item delegatesWon Number of delegates won by given candidate (numeric).
+#' \item party Party of given candidate, 'Republican' or 'Democratic' (character string).
+#' \item{delegatesNeeded} Number of delegates needed by given candidate to obtain nomination (numeric).
+#' Automatically determined when method is initialized with creation of a new instance of the class 'Candidate'.
 #'  }
 #' @author Jeff Ziegler
 #' @examples
