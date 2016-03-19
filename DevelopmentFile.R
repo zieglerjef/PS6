@@ -63,5 +63,20 @@ propNeeded(newCandidate)
 propNeeded(newCandidate, 10)
 # throw warning
 
-# propNeeded (remainingDelegates as of 3/19/16 = 2293)
-propNeeded(newCandidate, 2293)
+# propNeeded (remainingDelegates as of 3/19/16 = 2295)
+propNeeded(newCandidate, 2295)
+
+# createRace
+clinton <- createCandidate("H. Clinton", 1614, "Democrat")
+sanders <- createCandidate("B. Sanders", 856, "Democrat")
+demCandidates <- list(clinton, sanders)
+demRace <- createRace(allCandidates = demCandidates, party = "Democrat")
+plot(demRace)
+
+trump <- createCandidate("D. Trump", 678, "Republican")
+cruz <- createCandidate("T. Cruz", 423, "Republican")
+rubio <- createCandidate("M. Rubio", 164, "Republican")
+kasich <- createCandidate("J. Kasich", 143, "Republican")
+repCandidates <- list(trump, cruz, rubio, kasich)
+repRace <- createRace(allCandidates = repCandidates, party = "Republican")
+plot(repRace)
