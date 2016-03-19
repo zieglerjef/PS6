@@ -17,3 +17,5 @@ Collate:
     'primaryRacePack-package.R'
     'createCandidate.R'
     'propNeeded.R'
+    'createRace.R'
+    'Race.R'
