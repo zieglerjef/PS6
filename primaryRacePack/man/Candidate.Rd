@@ -7,7 +7,7 @@
 \alias{show,Candidate-method}
 \title{A Candidate object}
 \description{
-Objects of class \code{Candidate} are created by the \code{addCandidate} function. Objects of
+Objects of class \code{Candidate} are created by the \code{createCandidate} function. Objects of
 this class include \code{show} and \code{print} methods.
 }
 \details{
@@ -16,7 +16,7 @@ An object of the class `Candidate' has the following slots:
 \item \code{name} Name of the presidential candidate (character string).
 \item \code{delegatesWon} Number of delegates won by given candidate (numeric).
 \item \code{party} Party of given candidate, 'Republican' or 'Democratic' (character string).
-\item \code{delegatesNeeded} Number of delegates needed by given candidate (numeric).
+\item \code{delegatesNeeded} Number of delegates needed by given candidate to obtain nomination (numeric).
 }
 }
 \author{
