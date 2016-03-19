@@ -5,8 +5,8 @@ setwd("~/Documents/Git/Class/PS6")
 
 # create package skelton so it can find the package root
 # create package.skeleton only on first use
-# package.skeleton(code_files = c("primaryRacePack-package.R", "Candidate.R", "createCandidate.R", "propNeeded.R"),
-#                 name="primaryRacePack")
+# package.skeleton(code_files = c("primaryRacePack-package.R", "Candidate.R", "createCandidate.R", "propNeeded.R",
+#                  "createRace.R", "Race.R"), name="primaryRacePack")
 
 # Run to create package
 current.code <- as.package("primaryRacePack")
@@ -21,6 +21,8 @@ document(current.code)
 # Candidate.R
 # createcCandidate.R
 # propNeeded.R
+# createRace.R
+# Race.R
 
 # Check the NAMESPACE as well
 
