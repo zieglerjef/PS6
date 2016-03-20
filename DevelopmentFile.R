@@ -47,8 +47,6 @@ newCandidate <- createCandidate(name = 856, delegatesWon = 856, party = "Democra
 
 # createCandidate (wrong input)
 newCandidate <- createCandidate(name = "Bernie Sanders", delegatesWon = 856, party = "Party")
-# showCandidate
-show(newCandidate)
 # throw error
 
 # createCandidate
