@@ -40,6 +40,8 @@ setGeneric(name = "propNeeded",
 setMethod(f="propNeeded", 
           # create function
           definition = function(object, remainingDelegates){
+            # check validity
+            validObject(object)
             # calculate proportion of remaining delegates needed to win
             delegateProp <- ((object@delegatesNeeded - object@delegatesWon) / remainingDelegates)
             # make sure candidate is not essentially eliminated already

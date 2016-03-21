@@ -2,13 +2,13 @@
 #'
 #'
 #' Objects of class \code{Race} are created by the \code{addRace} function. Objects of
-#' this class only contain objects of class \code{Candidate} and include a \code{plot} methods.
+#' this class only contain objects of class \code{Candidate} and include a \code{plot}.
 #' 
 #' An object of the class `Race' has the following slots:
 #' \itemize{
 #' \item \code{allCandidates} Object(s) of class 'Candidate'. Candidates should all 
 #' be from the same political party (list).
-#' \item \code{party} Party of candidates, 'Republican' or 'Democratic' (character string).
+#' \item \code{party} Party of candidates, 'Republican' or 'Democrat' (character string).
 #' \item \code{delegatesNeeded} Number of delegates needed by given candidate (numeric).
 #' \item \code{delegatesRemaining} Number of delegates not yet allocated in a given party primary (numeric).
 #' }
@@ -17,7 +17,7 @@
 #' clinton <- createCandidate("H. Clinton", 1614, "Democrat")
 #' sanders <- createCandidate("B. Sanders", 856, "Democrat")
 #' demCandidates <- list(clinton, sanders)
-#' demRace <- createRace(allCandidates = demCandidates, party = "Republican")
+#' demRace <- createRace(allCandidates = demCandidates, party = "Democrat")
 #' plot(x = demRace)
 #' 
 #' @seealso  \code{\link{createRace}}, \code{\link{createCandidate}}, \code{\link{Candidate}}
@@ -36,6 +36,7 @@ setClass(Class="Race",
                    delegatesNeeded = "numeric",
                    delegatesRemaining = "numeric"
                  ),
+                 # specify default values
                  prototype = prototype(
                    allCandidates = NULL,
                    party = NULL,
@@ -44,7 +45,7 @@ setClass(Class="Race",
                  ),
                  # create validity check
                  validity = function(object){
-                   # make sure candidate name is specified
+                   # make sure candidate names are specified
                    if(is.null(object@allCandidates)){
                      stop("Please include the candidates!")
                    }
@@ -60,14 +61,16 @@ setMethod("initialize", "Race",
           function(.Object, allCandidates, party){
             .Object@allCandidates <- allCandidates
             .Object@party <- party
+            # the number of delegates won by all the candidates thus far
+            totalWon <- sum(sapply(1:length(allCandidates), FUN=function(i) allCandidates[[i]]@delegatesWon))
+            # calculate remaining delegates: Republican
             if(.Object@party=="Republican"){
-              totalWonRep <- sum(sapply(1:length(allCandidates), FUN=function(i) allCandidates[[i]]@delegatesWon))
-              .Object@delegatesRemaining <- 2472 - totalWonRep
+              .Object@delegatesRemaining <- 2472 - totalWon
               .Object@delegatesNeeded <- 1237
             }
+            # calculate remaining delegates: Democrat
             if(.Object@party=="Democrat"){
-              totalWonDem <- sum(sapply(1:length(allCandidates), FUN=function(i) allCandidates[[i]]@delegatesWon))
-              .Object@delegatesRemaining <- 4765 - totalWonDem
+              .Object@delegatesRemaining <- 4765 - totalWon
               .Object@delegatesNeeded <- 2383
             }
             value=callNextMethod()

@@ -5,13 +5,13 @@
 #'
 #' @param name Name of the presidential candidate (character string). 
 #' @param delegatesWon Number of delegates won by given candidate (numeric).
-#' @param party Party of given candidate, 'Republican' or 'Democratic' (character string).
+#' @param party Party of given candidate, 'Republican' or 'Democrat' (character string).
 #'
-#' @return An object of class `Candidate' containing
+#' @return An object of class 'Candidate' containing
 #' \itemize{
 #' \item name Name of the presidential candidate (character string).
 #' \item delegatesWon Number of delegates won by given candidate (numeric).
-#' \item party Party of given candidate, 'Republican' or 'Democratic' (character string).
+#' \item party Party of given candidate, 'Republican' or 'Democrat' (character string).
 #' \item{delegatesNeeded} Number of delegates needed by given candidate to obtain nomination (numeric).
 #' Automatically determined when method is initialized with creation of a new instance of the class 'Candidate'.
 #'  }

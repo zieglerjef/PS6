@@ -12,9 +12,7 @@
 #' 
 #' @seealso \code{\link{createCandidate}}, \code{\link{Candidate}}, \code{\link{propNeeded}}
 #'
-#' 
-#' demo(createCandidate.R)
-#' demo(propNeeded.R)
+#'
 #' 
 #'
 NULL
