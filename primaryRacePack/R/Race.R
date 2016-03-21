@@ -60,7 +60,6 @@ setClass(Class="Race",
 setMethod("initialize", "Race", 
           function(.Object, allCandidates, party){
             .Object@allCandidates <- allCandidates
-            .Object@party <- party
             # the number of delegates won by all the candidates thus far
             totalWon <- sum(sapply(1:length(allCandidates), FUN=function(i) allCandidates[[i]]@delegatesWon))
             # calculate remaining delegates: Republican
